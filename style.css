@@ -1,25 +1,32 @@
 body {
     background-image: url(/upload/styleimg/background_main.png); /* Путь к фоновому изображению */
-    background-color: #dfdad4; /* Цвет фона */
+    background-color: #cac5bf; /* Цвет фона */
    }
 
-#hdr { 
-    padding: 80px;
+#header { 
+    padding: 30px;
     border: 2px solid;
-    border-radius: 10px #0f0f0f;
+    border-radius: 10px;
     background-image: url(/upload/styleimg/header1.jpg);
 }
 
-#hdr h1 {
-	font-family: cursive ;
-	font-size: 80px;
-	color: #0f0f0f;
+#header h1 {
+	font-family: cursive;
+	font-size: 50px;
+	color: #000000;
 	letter-spacing: 4px;
 	text-align: center;	
 	text-shadow: 1px 1px 2px rgb(24, 23, 23);	
 	margin-top: 4px;
-	margin-left: 200px;
+	margin-left: 250px;
 }  
+
+#header a:active,
+a:hover,
+a {
+    color: #000000;
+    text-decoration: none;
+}
 
 #userWelcome {
 	color: rgb(8, 8, 8);
@@ -33,7 +40,7 @@ body {
 	font-size: 23px;
 }
 
-#auth_block{
+#auth_block {
     width: 250px;
 	height: 100px;
     float: right;
@@ -43,7 +50,7 @@ body {
 
 }
 
-#auth_block a{
+#auth_block a {
     display: block;
     padding: 7px;
     border-radius: 10px;
@@ -70,7 +77,7 @@ body {
 	float: right;
 }
 
-#link_register a{
+#link_register a {
     background: #a2a7a2d3;
 }
 

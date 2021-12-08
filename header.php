@@ -12,7 +12,7 @@
         <link rel="shortcut icon" href="main.ico">
     </head>
     <body>
-    <div id="hdr">
+    <div id="header">
         <div id="auth_block">
             <?php
             if(!isset($_SESSION["login"])){
@@ -36,5 +36,5 @@
             }
             ?>
         </div>
-        <h1>MyGallery</h1>
+        <h1><a href = "/index.php">MyGallery</a></h1>
     </div>

@@ -23,18 +23,22 @@ if (isset($_SESSION["login"])) {
 		}
 		echo '</tr>';
 		echo '</table>';
-	} else {
-		echo 'Картинок нету!';
 	}
 } else {
 	$sql = 'SELECT * FROM `userimg` ORDER BY `date` DESC';
 	$query = $mysqli->query($sql);
 	echo '<table id = "userImg">';
+	echo '<tr>';
+	$count = 0;
 	while ($result = $query->fetch_assoc()) 
 	{
-		echo '<tr>
-				<td><img width="200" src="' . $result["image"] . '" /></td>
-			</tr>';
+		if ($count !=0 && $count%3 == 0 ) 
+		{
+			echo "</tr><tr>";
+		}
+		echo '<td><img width="400" src="' . $result["image"] . '" /></td>';
+		$count++;
 	}
+	echo '</tr>';
 	echo '</table>';
 }

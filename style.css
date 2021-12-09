@@ -1,68 +1,75 @@
 body {
-    background-image: url(/upload/styleimg/background_main.png); /* Путь к фоновому изображению */
-    background-color: #cac5bf; /* Цвет фона */
-   }
+    background-image: url(/upload/styleimg/background_main.png);
+    /* Путь к фоновому изображению */
+    background-color: #cac5bf;
+    /* Цвет фона */
+}
 
-#header { 
+#header {
     padding: 30px;
-    border: 2px solid;
-    border-radius: 10px;
-    background-image: url(/upload/styleimg/header1.jpg);
+    border: none;
+    background-color: #ebe4cd;
+    background-image: url(/upload/styleimg/background_main_header.png);
+    border-radius: 5px;
+    box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.3);
 }
 
 #header h1 {
-	font-family: cursive;
-	font-size: 50px;
-	color: #000000;
-	letter-spacing: 4px;
-	text-align: center;	
-	text-shadow: 1px 1px 2px rgb(24, 23, 23);	
-	margin-top: 4px;
-	margin-left: 250px;
-}  
+    font-family: cursive;
+    font-size: 50px;
+    color: #000000;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(24, 23, 23);
+    margin-top: 4px;
+    margin-left: 250px;
+}
 
 #header a:active,
-a:hover,
-a {
+#header a:hover,
+#header a {
     color: #000000;
     text-decoration: none;
 }
 
 #userWelcome {
-	color: rgb(8, 8, 8);
-	text-align: center;
-	margin-bottom: 10px;
+    background-color: #e0d6b4;
+    border-radius: 5px 5px 0px 0px;
+    color: rgb(0, 0, 0);
+    padding: 7px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 0px;
 }
 
 #lastWord {
-	color: rgb(14, 13, 13);
-	font-weight: bold;
-	font-size: 23px;
+    color: rgb(14, 13, 13);
+    font-weight: bold;
+    font-size: 23px;
 }
 
 #auth_block {
     width: 250px;
-	height: 100px;
+    height: 100px;
     float: right;
     text-align: center;
-	border: 1px solid rgb(17, 17, 17);
-	border-radius: 10px;
-
+    border: none;
+    border-radius: 10px;
+    background-color: #ebe4cd;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 #auth_block a {
     display: block;
     padding: 7px;
-    border-radius: 10px;
+    border-radius: 3px;
     color: rgb(12, 12, 12);
-    width: 90px;
-    height: 25px;
     text-decoration: none;
-	margin-left: 14px;
-}
-
-#auth_block a:hover {
-    text-decoration: underline;
+    margin-left: 15px;
+    width: 90px;
+    height: 20px;
+    float: left;
 }
 
 #link_register {
@@ -74,22 +81,113 @@ a {
 }
 
 #link_logout {
-	float: right;
+    float: left;
 }
 
+#link_auth a,
 #link_register a {
-    background: #a2a7a2d3;
+    background-color: #dbdada;
 }
 
-#link_auth a, #link_logout a{
-    background: #a2a7a2d3;
+#link_auth a:hover,
+#link_register a:hover {
+    background-color: #ebe9e9;
     text-align: center;
 }
 
+#link_download a,
+#link_logout a {
+    background-color: #dbdada;
+    text-align: center;
+}
+
+#link_download a:hover,
+#link_logout a:hover {
+    background-color: #ebe9e9;
+    text-align: center;
+}
+
+
 /* Блок с формой регистрации */
-#form_register, #form_auth{
+
+#form_register,
+#form_auth {
+    background-color: #ebe4cd;
+    border-radius: 5px;
+    margin: 100px auto;
     width: 300px;
-    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+#form_register h2,
+#form_auth h2 {
+    background-color: #e0d6b4;
+    border-radius: 5px 5px 0px 0px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+#form_auth fieldset,
+#form_register fieldset {
+    border: none;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+#form_auth form,
+#form_register form {
+    overflow: hidden;
+    width: 300px;
+}
+
+#form_auth fieldset input[type="login"],
+#form_register fieldset input[type="login"] {
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 12px 10px;
+    width: 235px;
+}
+
+#form_auth fieldset input[type="password"],
+#form_register fieldset input[type="password"] {
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    margin-top: 3px;
+    padding: 12px 10px;
+    width: 235px;
+}
+
+#form_auth fieldset input[type="submit"],
+#form_register fieldset input[type="submit"] {
+    border: none;
+    border-radius: 3px;
+    background-color: #dbdada;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 3px;
+    padding: 12px;
+    width: 257px;
+}
+
+#form_auth fieldset input[type="submit"]:hover,
+#form_register fieldset input[type="submit"]:hover {
+    border: none;
+    border-radius: 3px;
+    background-color: #ebe9e9;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 3px;
+    padding: 12px;
+    width: 257px;
 }
 
 #authorized h2 {
@@ -97,9 +195,17 @@ a {
 }
 
 #userImg {
-	margin: auto;
-	background-color: #858383;
-	border: 1px solid rgb(17, 17, 17);
+    margin: auto;
+    margin-top: 20px;
+    background-color: #ebe4cd;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#userImg img {
+    margin: 5px;
+    border-radius: 3px;
 }
 
 #footer h2 {

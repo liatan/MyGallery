@@ -6,9 +6,7 @@ include 'singInMesseage.php';
 ?>
 
 <?php
-include 'imgAction.php';
+include 'imgDelete.php';
 include 'imgTableCreate.php';
 include 'footer.php';
 ?>
-
-</html>

@@ -194,6 +194,7 @@ body {
     text-align: center;
 }
 
+#allImg,
 #userImg {
     margin: auto;
     margin-top: 20px;
@@ -201,11 +202,50 @@ body {
     border: none;
     border-radius: 10px;
     padding: 10px;
+    width: 1300px;
+}
+
+#allImg img {
+    margin: 5px;
+    border-radius: 3px;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
 }
 
 #userImg img {
     margin: 5px;
+    margin-bottom: -29px;
     border-radius: 3px;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
+#userImg a {
+    font-size: 30px;
+    opacity: 0.1;
+    color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    background-image: url(/upload/styleimg/redcrest.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 88%;
+    top: -217px;
+}
+
+#userImg a:hover {
+    font-size: 30px;
+    opacity: 0.9;
+    color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    background-image: url(/upload/styleimg/redcrest.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 88%;
+    top: -217px;
 }
 
 #footer h2 {

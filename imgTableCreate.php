@@ -13,12 +13,12 @@ if (isset($_SESSION["login"])) {
 		$count = 0;
 		while ($result = $query->fetch_assoc()) 
 		{
-			if ($count !=0 && $count%3 == 0 ) 
+			if ($count !=0 && $count%4 == 0 ) 
 			{
 				echo "</tr><tr>";
 			}
-			echo ' <td><img width="400" src="' . $result["image"] . '" />
-				   <br><a href="?del=' . $result["imageId"] . '">Удалить</a></td>';
+			echo ' <td><img src="' . $result["image"] . '" />
+				   <br><a href="?del=' . $result["imageId"] . '">У</a></td>';
 				   $count++;
 		}
 		echo '</tr>';
@@ -27,16 +27,16 @@ if (isset($_SESSION["login"])) {
 } else {
 	$sql = 'SELECT * FROM `userimg` ORDER BY `date` DESC';
 	$query = $mysqli->query($sql);
-	echo '<table id = "userImg">';
+	echo '<table id = "allImg">';
 	echo '<tr>';
 	$count = 0;
 	while ($result = $query->fetch_assoc()) 
 	{
-		if ($count !=0 && $count%3 == 0 ) 
+		if ($count !=0 && $count%4 == 0 ) 
 		{
 			echo "</tr><tr>";
 		}
-		echo '<td><img width="400" src="' . $result["image"] . '" /></td>';
+		echo '<td><img src="' . $result["image"] . '" /></td>';
 		$count++;
 	}
 	echo '</tr>';

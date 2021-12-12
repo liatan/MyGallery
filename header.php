@@ -1,12 +1,16 @@
+
 <?php
 //Запускаем сессию
+
 session_start();
 ?>
 
 <!DOCTYPE html>
+
 <html>
 
 <head>
+    <script src="JS/jquery-3.6.0.min.js"></script>
     <title>MyGallery</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">

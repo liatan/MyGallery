@@ -110,17 +110,20 @@ body {
 
 /* Блок с формой регистрации */
 
+#downloadForm,
 #form_register,
 #form_auth {
     background-color: #ebe4cd;
     border-radius: 5px;
     margin: 100px auto;
     width: 300px;
+    height: 250px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
+#downloadForm h2,
 #form_register h2,
 #form_auth h2 {
     background-color: #e0d6b4;
@@ -133,8 +136,7 @@ body {
     font-size: 14px;
 }
 
-#form_auth fieldset,
-#form_register fieldset {
+fieldset {
     border: none;
     margin-bottom: 10px;
     padding: 20px;
@@ -144,7 +146,6 @@ body {
 #form_auth form,
 #form_register form {
     overflow: hidden;
-    width: 300px;
 }
 
 #form_auth fieldset input[type="login"],
@@ -164,6 +165,7 @@ body {
     width: 235px;
 }
 
+#downloadForm fieldset input[type="submit"],
 #form_auth fieldset input[type="submit"],
 #form_register fieldset input[type="submit"] {
     border: none;
@@ -177,6 +179,7 @@ body {
     width: 257px;
 }
 
+#downloadForm fieldset input[type="submit"]:hover,
 #form_auth fieldset input[type="submit"]:hover,
 #form_register fieldset input[type="submit"]:hover {
     border: none;
@@ -188,6 +191,39 @@ body {
     margin-top: 3px;
     padding: 12px;
     width: 257px;
+}
+
+#downloadField {
+    opacity: 0.5;
+    margin: -22px auto;
+    position: relative;
+    display: block;
+    border: 2px dashed;
+    border-radius: 3px;
+    background-color: #e4d08f;
+    background-image: url(/upload/styleimg/arrow_down_download.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#downloadField:hover {
+    opacity: 1;
+    position: relative;
+    border: 2px solid;
+    border-radius: 3px;
+    background-color: #e4d08f;
+    background-image: url(/upload/styleimg/arrow_down_download.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#file {
+    opacity: 0;
+    width: 249px;
+    height: 107px;
+    border: 2px solid;
 }
 
 #authorized h2 {
@@ -231,7 +267,7 @@ body {
     background-size: 20px;
     background-repeat: no-repeat;
     position: relative;
-    left: 88%;
+    left: 277px;
     top: -217px;
 }
 
@@ -244,7 +280,7 @@ body {
     background-size: 20px;
     background-repeat: no-repeat;
     position: relative;
-    left: 88%;
+    left: 277px;
     top: -217px;
 }
 

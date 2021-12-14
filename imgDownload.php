@@ -12,7 +12,7 @@ if (isset($_SESSION["login"])) {
 	<h2>Загрузка изображений</h2>
     <form action="" method="POST" enctype="multipart/form-data">
 	<fieldset>
-        <div id = "downloadField"><input type="file" title=" " name="image[]" id = "file"  multiple /></div><br>
+        <div id = "downloadField"><input type="file" title=" " name="image[]" id = "file"  multiple /></div><span id = "downloadFieldText">Перетащите файлы сюда</span><br>
         <!-- <input type="button" name="addDownloadBtn" onclick="addDownBtn()" /><br> -->
         <br><input type="submit" value="Загрузить" />
 	</fieldset>

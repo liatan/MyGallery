@@ -195,22 +195,11 @@ fieldset {
 
 #downloadField {
     opacity: 0.5;
-    margin: -22px auto;
+    margin: -28px auto;
     position: relative;
+    top: 5px;
     display: block;
     border: 2px dashed;
-    border-radius: 3px;
-    background-color: #e4d08f;
-    background-image: url(/upload/styleimg/arrow_down_download.png);
-    background-size: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#downloadField:hover {
-    opacity: 1;
-    position: relative;
-    border: 2px solid;
     border-radius: 3px;
     background-color: #e4d08f;
     background-image: url(/upload/styleimg/arrow_down_download.png);
@@ -222,8 +211,16 @@ fieldset {
 #file {
     opacity: 0;
     width: 249px;
-    height: 107px;
+    height: 120px;
     border: 2px solid;
+}
+
+#downloadFieldText {
+    opacity: 0.5;
+    margin-left: 13%;
+    position: relative;
+    top: 9px;
+    user-select: none;
 }
 
 #authorized h2 {
@@ -247,6 +244,59 @@ fieldset {
     width: 300px;
     height: 250px;
     object-fit: cover;
+    cursor: pointer;
+}
+
+#allImg img {
+    margin: 5px;
+    border-radius: 3px;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.popup_bg {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.popup_img {
+    animation-name: zoom;
+    animation-duration: 0.7s;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 #userImg img {
@@ -256,6 +306,7 @@ fieldset {
     width: 300px;
     height: 250px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 #userImg a {

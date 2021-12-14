@@ -1,3 +1,6 @@
+
+<script src="JS/jquery-3.6.0.min.js"></script>
+<script src="JS/imageZoomOnClick.jsx"></script>
 <?php
 session_start();
 
@@ -17,7 +20,7 @@ if (isset($_SESSION["login"])) {
 			{
 				echo "</tr><tr>";
 			}
-			echo ' <td><img src="' . $result["image"] . '" />
+			echo ' <td><img src="' . $result["image"] . '" class = "image"/>
 				   <br><a href="?del=' . $result["imageId"] . '">У</a></td>';
 				   $count++;
 		}
@@ -27,7 +30,7 @@ if (isset($_SESSION["login"])) {
 } else {
 	$sql = 'SELECT * FROM `userimg` ORDER BY `date` DESC';
 	$query = $mysqli->query($sql);
-	echo '<table id = "allImg">';
+	echo '<table id = "allImg" >';
 	echo '<tr>';
 	$count = 0;
 	while ($result = $query->fetch_assoc()) 
@@ -36,9 +39,11 @@ if (isset($_SESSION["login"])) {
 		{
 			echo "</tr><tr>";
 		}
-		echo '<td><img src="' . $result["image"] . '" /></td>';
+		echo '<td><img src="' . $result["image"] . '" class = "image" /></td>';
 		$count++;
 	}
 	echo '</tr>';
 	echo '</table>';
 }
+?>
+

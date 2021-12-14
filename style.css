@@ -138,8 +138,8 @@ body {
 
 fieldset {
     border: none;
-    margin-bottom: 10px;
-    padding: 20px;
+    margin-left: 10px;
+    padding: 10px;
     position: relative;
 }
 
@@ -150,6 +150,7 @@ fieldset {
 
 #form_auth fieldset input[type="login"],
 #form_register fieldset input[type="login"] {
+    margin: 5px auto;
     border: 1px solid #ffffff;
     border-radius: 3px;
     padding: 12px 10px;
@@ -158,6 +159,7 @@ fieldset {
 
 #form_auth fieldset input[type="password"],
 #form_register fieldset input[type="password"] {
+    margin: 5px auto;
     border: 1px solid #ffffff;
     border-radius: 3px;
     margin-top: 3px;
@@ -299,9 +301,25 @@ fieldset {
     }
 }
 
+.imageAnimation {
+    overflow: hidden;
+    margin: 5px auto;
+    width: 300px;
+    height: 250px;
+    border-radius: 3px;
+}
+
 #userImg img {
-    margin: 5px;
-    margin-bottom: -29px;
+    transition: all 1s ease-out;
+    border-radius: 3px;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#userImg img:hover {
+    transform: scale(1.1);
     border-radius: 3px;
     width: 300px;
     height: 250px;
@@ -318,8 +336,8 @@ fieldset {
     background-size: 20px;
     background-repeat: no-repeat;
     position: relative;
-    left: 277px;
-    top: -217px;
+    left: 270px;
+    top: -243px;
 }
 
 #userImg a:hover {
@@ -331,8 +349,8 @@ fieldset {
     background-size: 20px;
     background-repeat: no-repeat;
     position: relative;
-    left: 277px;
-    top: -217px;
+    left: 270px;
+    top: -243px;
 }
 
 #footer h2 {

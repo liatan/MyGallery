@@ -20,8 +20,8 @@ if (isset($_SESSION["login"])) {
 			{
 				echo "</tr><tr>";
 			}
-			echo ' <td><img src="' . $result["image"] . '" class = "image"/>
-				   <br><a href="?del=' . $result["imageId"] . '">У</a></td>';
+			echo ' <td><div class="imageAnimation"><img src="' . $result["image"] . '" class = "image"/>
+				   <br><a href="?del=' . $result["imageId"] . '">У</a></td></div>';
 				   $count++;
 		}
 		echo '</tr>';

@@ -10,16 +10,17 @@ if (isset($_SESSION["login"])) {
 ?>
 <div id="downloadForm">
 	<h2>Загрузка изображений</h2>
-    <form action="" method="POST" enctype="multipart/form-data">
-	<fieldset>
-        <div id = "downloadField"><input type="file" title=" " name="image[]" id = "file"  multiple /></div><span id = "downloadFieldText">Перетащите файлы сюда</span><br>
+    <form action="" method="POST" enctype="multipart/form-data" >
+		<div id = "downloadField"><span>Нажмите на область или перетяните файлы сюда</span>
+		<input type="file" title=" " name="image[]" id = "myFiles"  multiple /></div>
         <!-- <input type="button" name="addDownloadBtn" onclick="addDownBtn()" /><br> -->
-        <br><input type="submit" value="Загрузить" />
-	</fieldset>
+		<br><input type="submit" value="Загрузить" id ="submitBtn"/><br> 
     </form>
 </div>
 
-<!-- <script src="JS/addDownloadBtn.jsx"></script> -->
+<script src="JS/dragAndDrop.jsx"></script>
+<script src="JS/changedImg.jsx"></script>
+
 
 <?php
 	# Добавляем картинку

@@ -110,7 +110,6 @@ body {
 
 /* Блок с формой регистрации */
 
-#downloadForm,
 #form_register,
 #form_auth {
     background-color: #ebe4cd;
@@ -123,7 +122,6 @@ body {
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-#downloadForm h2,
 #form_register h2,
 #form_auth h2 {
     background-color: #e0d6b4;
@@ -136,16 +134,17 @@ body {
     font-size: 14px;
 }
 
-fieldset {
+#form_auth form,
+#form_register form {
+    overflow: hidden;
+}
+
+#form_register fieldset,
+#form_auth fieldset {
     border: none;
     margin-left: 10px;
     padding: 10px;
     position: relative;
-}
-
-#form_auth form,
-#form_register form {
-    overflow: hidden;
 }
 
 #form_auth fieldset input[type="login"],
@@ -167,7 +166,6 @@ fieldset {
     width: 235px;
 }
 
-#downloadForm fieldset input[type="submit"],
 #form_auth fieldset input[type="submit"],
 #form_register fieldset input[type="submit"] {
     border: none;
@@ -181,7 +179,6 @@ fieldset {
     width: 257px;
 }
 
-#downloadForm fieldset input[type="submit"]:hover,
 #form_auth fieldset input[type="submit"]:hover,
 #form_register fieldset input[type="submit"]:hover {
     border: none;
@@ -195,34 +192,94 @@ fieldset {
     width: 257px;
 }
 
-#downloadField {
+#downloadForm {
+    background-color: #ebe4cd;
+    border-radius: 5px;
+    margin: 100px auto;
+    width: 750px;
+    height: 500px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+#downloadForm h2 {
+    background-color: #e0d6b4;
+    border-radius: 5px 5px 0px 0px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+#downloadForm div {
     opacity: 0.5;
-    margin: -28px auto;
-    position: relative;
-    top: 5px;
-    display: block;
+    margin: 15px auto;
+    width: 710px;
     border: 2px dashed;
     border-radius: 3px;
     background-color: #e4d08f;
     background-image: url(/upload/styleimg/arrow_down_download.png);
     background-size: 100px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 300px 100px;
 }
 
-#file {
+#downloadForm div:hover {
+    opacity: 1;
+    margin: 15px auto;
+    width: 710px;
+    border: 2px dashed;
+    border-radius: 3px;
+    background-color: #e4d08f;
+    background-image: url(/upload/styleimg/arrow_down_download.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 300px 100px;
+}
+
+#downloadForm div span {
+    z-index: 1;
+    margin-top: 100px;
+    position: relative;
+    left: 25%;
+    top: 215px;
+    user-select: none;
+    pointer-events: none;
+}
+
+#downloadForm div input[type="file"] {
     opacity: 0;
-    width: 249px;
-    height: 120px;
+    width: 710px;
+    height: 325px;
     border: 2px solid;
 }
 
-#downloadFieldText {
-    opacity: 0.5;
-    margin-left: 13%;
+#downloadForm form input[type="submit"] {
+    border: none;
+    border-radius: 3px;
+    background-color: #dbdada;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 17px;
+    padding: 15px;
+    width: 250px;
+}
+
+#downloadForm form input[type="submit"]:hover {
+    background-color: #ebe9e9;
+}
+
+#previewImage {
+    margin-left: 5px;
     position: relative;
-    top: 9px;
-    user-select: none;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 #authorized h2 {
@@ -238,15 +295,6 @@ fieldset {
     border-radius: 10px;
     padding: 10px;
     width: 1300px;
-}
-
-#allImg img {
-    margin: 5px;
-    border-radius: 3px;
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    cursor: pointer;
 }
 
 #allImg img {

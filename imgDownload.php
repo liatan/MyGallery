@@ -14,7 +14,9 @@ if (isset($_SESSION["login"])) {
 		<div id = "downloadField"><span>Нажмите на область или перетяните файлы сюда</span>
 		<input type="file" title=" " name="image[]" id = "myFiles"  multiple /></div>
         <!-- <input type="button" name="addDownloadBtn" onclick="addDownBtn()" /><br> -->
-		<br><input type="submit" value="Загрузить" id ="submitBtn"/><br> 
+		<input type="submit" value="Загрузить"/>
+		<br><div id="selectedImg"><p id="imgPush"></p></div>
+		
     </form>
 </div>
 

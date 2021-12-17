@@ -5,7 +5,7 @@ $("#myFiles").on("change", function()
     for (let i = 0; i < fileCount; i++) 
     {
         text = '<img src="'+URL.createObjectURL(file[i])+'" id = "previewImage" tabindex="0" />';
-        $('#downloadField').after(text);
+        $('#imgPush').after(text);
     }
     
 });

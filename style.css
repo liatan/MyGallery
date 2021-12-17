@@ -116,10 +116,15 @@ body {
     border-radius: 5px;
     margin: 100px auto;
     width: 300px;
-    height: 250px;
+    height: auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.text-error {
+    color: red;
+    text-align: center;
 }
 
 #form_register h2,
@@ -156,6 +161,7 @@ body {
     width: 235px;
 }
 
+#form_register fieldset input[type="email"],
 #form_auth fieldset input[type="password"],
 #form_register fieldset input[type="password"] {
     margin: 5px auto;
@@ -197,7 +203,7 @@ body {
     border-radius: 5px;
     margin: 100px auto;
     width: 750px;
-    height: 500px;
+    height: 530px;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
@@ -214,7 +220,7 @@ body {
     font-size: 14px;
 }
 
-#downloadForm div {
+#downloadField {
     opacity: 0.5;
     margin: 15px auto;
     width: 710px;
@@ -227,7 +233,27 @@ body {
     background-position: 300px 100px;
 }
 
-#downloadForm div:hover {
+#selectedImg {
+    overflow: hidden;
+    margin-left: 276px;
+    width: 455px;
+    height: 94px;
+    position: relative;
+    top: -51px;
+}
+
+#previewImage {
+    display: inline;
+    margin-left: 6px;
+    margin-top: 0px;
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    position: relative;
+    top: -10px;
+}
+
+#downloadField:hover {
     opacity: 1;
     margin: 15px auto;
     width: 710px;
@@ -258,6 +284,7 @@ body {
 }
 
 #downloadForm form input[type="submit"] {
+    position: static;
     border: none;
     border-radius: 3px;
     background-color: #dbdada;
@@ -273,13 +300,18 @@ body {
     background-color: #ebe9e9;
 }
 
-#previewImage {
-    margin-left: 5px;
-    position: relative;
-    left: 15px;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+#downloadForm form input[type="button"] {
+    position: static;
+    border: none;
+    border-radius: 3px;
+    background-color: #dbdada;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 17px;
+    padding: 15px;
+    width: 250px;
 }
 
 #authorized h2 {

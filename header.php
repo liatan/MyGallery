@@ -19,14 +19,14 @@ session_start();
 
 <body>
     <div id="header">
-        <div id="auth_block">
+        <div id="user_menu">
             <?php
-            if (isset($_SESSION["login"])) {
+            if (isset($_SESSION["id"])) {
                 echo '<p id="userWelcome">Вы на сайте как <span id = "lastWord">' . $_SESSION["login"] . '!</span></p>';
                 //Если пользователь авторизован, то выводим ссылку Выход
             ?>
             <div id="link_download">
-                <a href="/imgDownload.php">Загрузка</a>
+                <a href="/image_download.php">Загрузка</a>
             </div>
             <div id="link_logout">
                 <a href="/logout.php">Выход</a>
@@ -40,7 +40,7 @@ session_start();
                 <a href="/registration_form.php">Регистрация</a>
             </div>
             <div id="link_auth">
-                <a href="/singIn_form.php">Авторизация</a>
+                <a href="/log_on_form.php">Авторизация</a>
             </div>
             <?php
             }

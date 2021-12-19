@@ -49,7 +49,7 @@ body {
     font-size: 23px;
 }
 
-#auth_block {
+#user_menu {
     width: 250px;
     height: 100px;
     float: right;
@@ -60,7 +60,7 @@ body {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-#auth_block a {
+#user_menu a {
     display: block;
     padding: 7px;
     border-radius: 3px;
@@ -110,8 +110,8 @@ body {
 
 /* Блок с формой регистрации */
 
-#form_register,
-#form_auth {
+#registration_block,
+#authorization_block {
     background-color: #ebe4cd;
     border-radius: 5px;
     margin: 100px auto;
@@ -127,8 +127,8 @@ body {
     text-align: center;
 }
 
-#form_register h2,
-#form_auth h2 {
+#registration_block h2,
+#authorization_block h2 {
     background-color: #e0d6b4;
     border-radius: 5px 5px 0px 0px;
     color: rgb(0, 0, 0);
@@ -139,21 +139,21 @@ body {
     font-size: 14px;
 }
 
-#form_auth form,
-#form_register form {
+#authorization_block form,
+#registration_block form {
     overflow: hidden;
 }
 
-#form_register fieldset,
-#form_auth fieldset {
+#registration_block fieldset,
+#authorization_block fieldset {
     border: none;
     margin-left: 10px;
     padding: 10px;
     position: relative;
 }
 
-#form_auth fieldset input[type="login"],
-#form_register fieldset input[type="login"] {
+#authorization_block fieldset input[type="login"],
+#registration_block fieldset input[type="login"] {
     margin: 5px auto;
     border: 1px solid #ffffff;
     border-radius: 3px;
@@ -161,9 +161,9 @@ body {
     width: 235px;
 }
 
-#form_register fieldset input[type="email"],
-#form_auth fieldset input[type="password"],
-#form_register fieldset input[type="password"] {
+#registration_block fieldset input[type="email"],
+#authorization_block fieldset input[type="password"],
+#registration_block fieldset input[type="password"] {
     margin: 5px auto;
     border: 1px solid #ffffff;
     border-radius: 3px;
@@ -172,8 +172,8 @@ body {
     width: 235px;
 }
 
-#form_auth fieldset input[type="submit"],
-#form_register fieldset input[type="submit"] {
+#authorization_block fieldset input[type="submit"],
+#registration_block fieldset input[type="submit"] {
     border: none;
     border-radius: 3px;
     background-color: #dbdada;
@@ -185,8 +185,8 @@ body {
     width: 257px;
 }
 
-#form_auth fieldset input[type="submit"]:hover,
-#form_register fieldset input[type="submit"]:hover {
+#authorization_block fieldset input[type="submit"]:hover,
+#registration_block fieldset input[type="submit"]:hover {
     border: none;
     border-radius: 3px;
     background-color: #ebe9e9;
@@ -198,7 +198,7 @@ body {
     width: 257px;
 }
 
-#downloadForm {
+#download_block {
     background-color: #ebe4cd;
     border-radius: 5px;
     margin: 100px auto;
@@ -209,7 +209,7 @@ body {
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-#downloadForm h2 {
+#download_block h2 {
     background-color: #e0d6b4;
     border-radius: 5px 5px 0px 0px;
     color: rgb(0, 0, 0);
@@ -220,7 +220,7 @@ body {
     font-size: 14px;
 }
 
-#downloadField {
+#download_drop_field {
     opacity: 0.5;
     margin: 15px auto;
     width: 710px;
@@ -233,7 +233,7 @@ body {
     background-position: 300px 100px;
 }
 
-#selectedImg {
+#selected_image {
     overflow: hidden;
     margin-left: 276px;
     width: 455px;
@@ -242,7 +242,7 @@ body {
     top: -51px;
 }
 
-#previewImage {
+#image_preview {
     display: inline;
     margin-left: 6px;
     margin-top: 0px;
@@ -253,7 +253,7 @@ body {
     top: -10px;
 }
 
-#downloadField:hover {
+#download_drop_field:hover {
     opacity: 1;
     margin: 15px auto;
     width: 710px;
@@ -266,7 +266,7 @@ body {
     background-position: 300px 100px;
 }
 
-#downloadForm div span {
+#download_block div span {
     z-index: 1;
     margin-top: 100px;
     position: relative;
@@ -276,14 +276,14 @@ body {
     pointer-events: none;
 }
 
-#downloadForm div input[type="file"] {
+#download_block div input[type="file"] {
     opacity: 0;
     width: 710px;
     height: 325px;
     border: 2px solid;
 }
 
-#downloadForm form input[type="submit"] {
+#download_block form input[type="submit"] {
     position: static;
     border: none;
     border-radius: 3px;
@@ -296,11 +296,11 @@ body {
     width: 250px;
 }
 
-#downloadForm form input[type="submit"]:hover {
+#download_block form input[type="submit"]:hover {
     background-color: #ebe9e9;
 }
 
-#downloadForm form input[type="button"] {
+#download_block form input[type="button"] {
     position: static;
     border: none;
     border-radius: 3px;
@@ -318,8 +318,8 @@ body {
     text-align: center;
 }
 
-#allImg,
-#userImg {
+#all_img,
+#user_img {
     margin: auto;
     margin-top: 20px;
     background-color: #ebe4cd;
@@ -327,15 +327,6 @@ body {
     border-radius: 10px;
     padding: 10px;
     width: 1300px;
-}
-
-#allImg img {
-    margin: 5px;
-    border-radius: 3px;
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    cursor: pointer;
 }
 
 .popup {
@@ -381,7 +372,7 @@ body {
     }
 }
 
-.imageAnimation {
+.image_animation {
     overflow: hidden;
     margin: 5px auto;
     width: 300px;
@@ -389,7 +380,8 @@ body {
     border-radius: 3px;
 }
 
-#userImg img {
+#all_img img,
+#user_img img {
     transition: all 1s ease-out;
     border-radius: 3px;
     width: 300px;
@@ -398,7 +390,8 @@ body {
     cursor: pointer;
 }
 
-#userImg img:hover {
+#all_img img:hover,
+#user_img img:hover {
     transform: scale(1.1);
     border-radius: 3px;
     width: 300px;
@@ -407,7 +400,7 @@ body {
     cursor: pointer;
 }
 
-#userImg a {
+#user_img a {
     font-size: 30px;
     opacity: 0.1;
     color: rgba(0, 0, 0, 0);
@@ -420,7 +413,7 @@ body {
     top: -243px;
 }
 
-#userImg a:hover {
+#user_img a:hover {
     font-size: 30px;
     opacity: 0.9;
     color: rgba(0, 0, 0, 0);

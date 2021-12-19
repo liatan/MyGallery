@@ -3,7 +3,7 @@
     session_start();
  
     //Добавляем файл подключения к БД
-    include 'dbConnect.php';
+    include 'db_connect.php';
 
     if(isset($_POST["btn_submit_registration"]) && !empty($_POST["btn_submit_registration"]))
     {
@@ -11,8 +11,24 @@
         {
             //Обрезаем пробелы с начала и с конца строки
             $login = trim($_POST["login"]);
-            $result_query_login = $mysqli->query("SELECT `userLogin` FROM `users` WHERE `userLogin`='".$login."'");
+            $sql = "SELECT `user_login` FROM `users` WHERE `user_login`='{$login}'";
+            $result_query_login = $mysqli->query($sql);
             if ($result_query_login -> num_rows == 1 ) 
+            {
+                $_SESSION["error_reg"] = 1;
+                header("HTTP/1.1 301 Moved Permanently");
+                header("Location: /registration_form.php");
+                exit();
+            }       
+        }
+
+        if(isset($_POST["email"]))
+        {
+            //Обрезаем пробелы с начала и с конца строки
+            $email = trim($_POST["email"]);
+            $sql = "SELECT `user_email` FROM `users` WHERE `user_email`='{$email}'";
+            $result_query_email = $mysqli->query($sql);
+            if ($result_query_email -> num_rows == 1 ) 
             {
                 $_SESSION["error_reg"] = 1;
                 header("HTTP/1.1 301 Moved Permanently");
@@ -26,7 +42,8 @@
             $password = trim($_POST["password"]);
         }
         //Запрос на добавления пользователя в БД
-        $result_query_insert = $mysqli->query("INSERT INTO `users` (userLogin, 	userPass) VALUES ('".$login."', '".$password."')");
+        $sql = "INSERT INTO users(user_login, user_password, user_email) VALUES ('{$login}', '{$password}', '{$email}')";
+        $mysqli->query($sql);
         $_SESSION["success_reg"] = 1;
         //Отправляем пользователя на страницу авторизации
         header("HTTP/1.1 301 Moved Permanently");

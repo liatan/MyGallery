@@ -1,6 +1,6 @@
-$("#downloadField").on("dragover", function(){
-    $("#downloadField").css("opacity", "1");
+$("#download_drop_field").on("dragover", function(){
+    $("#download_drop_field").css("opacity", "1");
 });
-$("#downloadField").on("dragleave", function(){
-    $("#downloadField").css("opacity", "0.5");
+$("#download_drop_field").on("dragleave", function(){
+    $("#download_drop_field").css("opacity", "0.5");
 });

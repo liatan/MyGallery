@@ -1,6 +1,6 @@
-<div id="footer">
-    <h2>Подвал сайта</h2>
 </div>
+<footer> 
+    <h2>Подвал сайта</h2>
+</footer>
 </body>
-
 </html>

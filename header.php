@@ -18,33 +18,41 @@ session_start();
 </head>
 
 <body>
+    <div id="content">
     <div id="header">
+        <h1><a href="/index.php">MyGallery</a></h1>
         <div id="user_menu">
+        <ul id="ddmenu">
+            <li>
             <?php
             if (isset($_SESSION["id"])) {
-                echo '<p id="userWelcome">Вы на сайте как <span id = "lastWord">' . $_SESSION["login"] . '!</span></p>';
+                echo '<p>' . $_SESSION["login"] . '</p>';
                 //Если пользователь авторизован, то выводим ссылку Выход
             ?>
-            <div id="link_download">
-                <a href="/image_download.php">Загрузка</a>
-            </div>
-            <div id="link_logout">
-                <a href="/logout.php">Выход</a>
-            </div>
-            <?php
-             
+                <ul>
+                    <li><a href="/image_download.php">Загрузка</a></li>
+                    <li><a href="/logout.php">Выход</a></li>
+                </ul>
+            </li>
+        </ul> 
+            <?php 
             } else {
-                echo '<p id="userWelcome">Вы на сайте как <span id = "lastWord">Гость!</span></p>';
+
+                echo '<p>Гость</p>';
             ?>
-            <div id="link_register">
-                <a href="/registration_form.php">Регистрация</a>
-            </div>
-            <div id="link_auth">
-                <a href="/log_on_form.php">Авторизация</a>
-            </div>
+                <ul>
+                    <li><a href="/registration_form.php">Регистрация</a></li>
+                    <li><a href="/log_on_form.php">Авторизация</a></li>
+                </ul> 
+            </li>
+        </ul>  
             <?php
             }
             ?>
+
+<script type="text/javascript" src="JS/menu_slide.jsx"></script>
+            
+
         </div>
-        <h1><a href="/index.php">MyGallery</a></h1>
+        
     </div>

@@ -41,11 +41,9 @@
         {
             $password = trim($_POST["password"]);
         }
-        //Запрос на добавления пользователя в БД
         $sql = "INSERT INTO users(user_login, user_password, user_email) VALUES ('{$login}', '{$password}', '{$email}')";
         $mysqli->query($sql);
         $_SESSION["success_reg"] = 1;
-        //Отправляем пользователя на страницу авторизации
         header("HTTP/1.1 301 Moved Permanently");
         header("Location: /index.php");
 

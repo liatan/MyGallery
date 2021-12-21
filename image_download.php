@@ -20,7 +20,12 @@ if (isset($_SESSION["login"])) {
         <div id="selected_image">
             <p id="image_push_field"></p>
         </div>
-
+		<?php if( !empty($_SESSION["success_download"]) )
+		{
+			unset($_SESSION["success_download"]);
+			echo '<p>Загрузка прошла успешно</p>';
+		} ?>
+		
     </form>
 </div>
 
@@ -46,6 +51,9 @@ if (isset($_SESSION["login"])) {
 					move_uploaded_file($file, $fileSource.$fileName);
 					$sql = "INSERT INTO user_img(user_id, user_image, download_date) VALUES( {$id},'{$fileSource}{$fileName}',CURRENT_TIMESTAMP)";
 					$mysqli->query($sql);
+					$_SESSION["success_download"] = 1;
+					header("HTTP/1.1 301 Moved Permanently");
+        			header("Location: /image_download.php");
 				}
 			}
 		}

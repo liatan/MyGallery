@@ -6,7 +6,7 @@ if (($id = (int)$_GET["del"])) {
     $img = $mysqli->query($sql)->fetch_assoc();
     unlink($img["user_image"]);
     $mysqli->query("DELETE FROM `user_img` WHERE `image_id`='{$id}'");
-    header("Location: /");
+    header("Location: /gallery.php");
     exit;
 }
 

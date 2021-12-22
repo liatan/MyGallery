@@ -1,4 +1,3 @@
-
 <?php
 //Запускаем сессию
 
@@ -19,40 +18,41 @@ session_start();
 
 <body>
     <div id="content">
-    <div id="header">
-        <h1><a href="/index.php">MyGallery</a></h1>
-        <div id="user_menu">
-        <ul id="ddmenu">
-            <li>
-            <?php
+        <div id="header">
+            <h1><a href="/index.php">MyGallery</a></h1>
+            <nav>
+                <ul id="site_navigation">
+                    <li><a href="/gallery.php">Галерея</a></li>
+                    <li><a href="/index.php">Новости</a></li>
+                    <li><a href="/index.php">Случайная картинка</a></li>
+                </ul>
+            </nav>
+            <ul id="user_menu">
+                <li>
+                    <?php
             if (isset($_SESSION["id"])) {
                 echo '<p>' . $_SESSION["login"] . '</p>';
                 //Если пользователь авторизован, то выводим ссылку Выход
             ?>
-                <ul>
-                    <li><a href="/image_download.php">Загрузка</a></li>
-                    <li><a href="/logout.php">Выход</a></li>
-                </ul>
-            </li>
-        </ul> 
+                    <ul>
+                        <li><a href="/image_download.php">Загрузка</a></li>
+                        <li><a href="/logout.php">Выход</a></li>
+                    </ul>
+                </li>
+            </ul>
             <?php 
             } else {
 
                 echo '<p>Гость</p>';
             ?>
-                <ul>
-                    <li><a href="/registration_form.php">Регистрация</a></li>
-                    <li><a href="/log_on_form.php">Авторизация</a></li>
-                </ul> 
+            <ul>
+                <li><a href="/registration_form.php">Регистрация</a></li>
+                <li><a href="/log_on_form.php">Авторизация</a></li>
+            </ul>
             </li>
-        </ul>  
+            </ul>
             <?php
             }
             ?>
-
-<script type="text/javascript" src="JS/menu_slide.jsx"></script>
-            
-
+            <script type="text/javascript" src="JS/menu_slide.jsx"></script>
         </div>
-        
-    </div>

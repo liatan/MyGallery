@@ -5,10 +5,8 @@ include 'registration_message.php';
 include 'log_on_messeage.php';
 ?>
 
-<div id="site_update_news"></div>
+<!-- <div id="site_update_news"></div> -->
 
 <?php
-include 'image_delete.php';
-include 'image_table_create.php';
 include 'footer.php';
 ?>

@@ -24,7 +24,7 @@ session_start();
                 <ul id="site_navigation">
                     <li><a href="/gallery.php">Галерея</a></li>
                     <li><a href="/index.php">Новости</a></li>
-                    <li><a href="/index.php">Случайная картинка</a></li>
+                    <li><a href="/random_image.php">Случайная картинка</a></li>
                 </ul>
             </nav>
             <ul id="user_menu">

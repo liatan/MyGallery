@@ -1,13 +1,15 @@
 <?php
 //Подключение шапки
 include 'header.php';
-include 'registration_message.php';
-
 ?>
 
 <?php
 
 if (!isset($_SESSION["login"])) {
+    if (isset($_SESSION["error_reg"])) {
+        unset($_SESSION["error_reg"]);
+        echo '<script type="text/javascript" src="JS/registration_error.jsx"></script>' ;
+    }   
     
 ?>
 <div id="registration_block">

@@ -28,6 +28,12 @@
             $email = trim($_POST["email"]);
             $sql = "SELECT `user_email` FROM `users` WHERE `user_email`='{$email}'";
             $result_query_email = $mysqli->query($sql);
+            $hash = md5($login . time());
+            $_SESSION["hash"] = $hash;
+            $_SESSION["email"] = $email;
+            
+            
+            
             if ($result_query_email -> num_rows == 1 ) 
             {
                 $_SESSION["error_reg"] = 1;
@@ -39,16 +45,15 @@
         
         if(isset($_POST["password"]))
         {
-            $password = trim($_POST["password"]);
+            $password = password_hash(trim($_POST["password"]), PASSWORD_DEFAULT);
         }
         $sql = "INSERT INTO users(user_login, user_password, user_email) VALUES ('{$login}', '{$password}', '{$email}')";
         $mysqli->query($sql);
-        $_SESSION["success_reg"] = 1;
         header("HTTP/1.1 301 Moved Permanently");
-        header("Location: /index.php");
+        header("Location: /send.php"); 
 
     } else {
-         exit("<p><strong>Ошибка!</strong> Вы зашли на эту страницу напрямую, поэтому нет данных для обработки. Вы можете перейти на <a href=index.php> главную страницу </a>.</p>");
+        header("Location: /index.php");
     }
 
 ?>

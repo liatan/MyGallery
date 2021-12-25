@@ -1,7 +1,6 @@
 <?php
 
 include 'header.php';
-include 'log_on_messeage.php';
 
 ?>
 
@@ -9,7 +8,10 @@ include 'log_on_messeage.php';
 //Проверяем, если пользователь не авторизован, то выводим форму авторизации, 
 //иначе выводим сообщение о том, что он уже авторизован
 if (!isset($_SESSION["login"]) && !isset($_SESSION["password"])) {
-    
+    if (isset($_SESSION["error_log_on"])) {
+        unset($_SESSION["error_log_on"]);
+        echo '<script type="text/javascript" src="JS/log_on_error.jsx"></script>' ;
+    }    
 ?>
 <div id="authorization_block">
     <h2>Форма авторизации</h2>
@@ -22,14 +24,11 @@ if (!isset($_SESSION["login"]) && !isset($_SESSION["password"])) {
     </form>
 </div>
 
-<?php
-} else {
-?>
-<div id="authorized">
-    <h2>Вы уже авторизованы</h2>
-</div>
 
 <?php
+} else {
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: /index.php");
 }
 ?>
 

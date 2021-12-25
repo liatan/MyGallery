@@ -18,17 +18,17 @@
             $password = trim($_POST["password"]);
         } 
 
-        $sql = "SELECT * FROM `users` WHERE `user_login` = '{$login}' AND `user_password` = '{$password}'";
+        $sql = "SELECT * FROM `users` WHERE `user_login` = '{$login}'";
         $result_query_login = $mysqli->query($sql);
         foreach($result_query_login as $row)
         {   
                 $userid = $row["user_id"];
+                $password_hash = $row["user_password"];
         }
-        if ($result_query_login -> num_rows == 1 )
+        if ( password_verify($password, $password_hash) )
         {
             $_SESSION["id"] = $userid;
             $_SESSION["login"] = $login;
-            $_SESSION["succes_log_on"] = 1;
             header("HTTP/1.1 301 Moved Permanently");
             header("Location: /index.php");
             exit();

@@ -36,6 +36,7 @@ if (isset($_SESSION["login"])) {
 	# Добавляем картинку
 	if ($_SERVER["REQUEST_METHOD"] === 'POST') 
 	{
+		if(!empty($_FILES["image"]["tmp_name"]) ){
 		$countImage = count($_FILES["image"]["tmp_name"]);
 		for ($i = 0; $i < $countImage; $i++) 
 		{			
@@ -56,6 +57,7 @@ if (isset($_SESSION["login"])) {
 				}
 			}
 		}
+	}
 	}
 }
 

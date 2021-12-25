@@ -3,7 +3,6 @@
 <script src="JS/image_zoom_on_click.jsx"></script>
 
 <?php
-session_start();
 
 if (isset($_SESSION["login"])) {
 	$id = $_SESSION["id"];

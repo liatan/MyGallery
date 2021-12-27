@@ -24,11 +24,15 @@
         {   
                 $userid = $row["user_id"];
                 $password_hash = $row["user_password"];
+                $email_confirmed = $row["user_email_confirmed"];
+                $is_admin = $row["is_admin"];
         }
         if ( password_verify($password, $password_hash) )
         {
             $_SESSION["id"] = $userid;
             $_SESSION["login"] = $login;
+            $_SESSION["user_email_confirmed"] = $email_confirmed;
+            $_SESSION["is_admin"] = $is_admin;
             header("HTTP/1.1 301 Moved Permanently");
             header("Location: /index.php");
             exit();

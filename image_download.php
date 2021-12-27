@@ -2,9 +2,7 @@
 include 'db_connect.php';
 include 'header.php';
 
-
 $id = $_SESSION["id"];
-
 
 if (isset($_SESSION["login"])) {
 ?>
@@ -38,7 +36,7 @@ if (isset($_SESSION["login"])) {
 	{
 		if(!empty($_FILES["image"]["tmp_name"]) ){
 		$countImage = count($_FILES["image"]["tmp_name"]);
-		for ($i = 0; $i < $countImage; $i++) 
+		for ($i = 0; $i < $countImage + 1; $i++) 
 		{			
 			$file = $_FILES["image"]["tmp_name"][$i];
 			$fileType = $_FILES["image"]["type"][$i];

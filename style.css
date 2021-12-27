@@ -44,19 +44,31 @@ body {
 }
 
 #site_navigation {
-    display: block;
+    display: inline-block;
     width: auto;
     height: 50px;
+    margin: auto;
     position: fixed;
     top: 0;
-    left: 30%;
+    left: 25%;
 }
 
 #site_navigation li {
     display: block;
     float: left;
-    width: 140px;
-    height: 50px;
+    width: auto;
+    margin-left: 20px;
+}
+
+#site_navigation li a {
+    padding: 15px;
+    display: block;
+    height: 20px;
+    font-weight: bold;
+}
+
+#site_navigation li a:hover {
+    background-color: #e4d08f;
 }
 
 #user_menu {
@@ -89,8 +101,23 @@ body {
     float: left;
     font-weight: bold;
     font-size: 18px;
+    text-transform: uppercase;
     text-decoration: none;
     color: #000000;
+}
+
+#download {
+    background-image: url(/upload/styleimg/download-symbol_icon-icons.com_73591.ico);
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-size: 25px;
+}
+
+#logout {
+    background-image: url(/upload/styleimg/exit_icon-icons.com_48304.ico);
+    background-repeat: no-repeat;
+    background-position: 15px;
+    background-size: 25px;
 }
 
 #user_menu ul {
@@ -118,8 +145,20 @@ body {
     text-align: center;
 }
 
-#user_menu ul li a:hover {
+#download:hover {
     background: #e6cc8c;
+    background-image: url(/upload/styleimg/download-symbol_icon-icons.com_73591.ico);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 12px;
+}
+
+#logout:hover {
+    background: #e6cc8c;
+    background-image: url(/upload/styleimg/exit_icon-icons.com_48304.ico);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 15px;
 }
 
 #site_update_news {
@@ -130,8 +169,21 @@ body {
     margin: 70px auto;
 }
 
+#confirm_form {
+    display: block;
+    background-color: #ebe4cd;
+    border-radius: 3px;
+    padding: 30px;
+    width: 350px;
+    height: auto;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
 
-/* Блок с формой регистрации */
+#confirm_form span {
+    font-size: 18px;
+    font-weight: bold;
+}
 
 #registration_block,
 #authorization_block {

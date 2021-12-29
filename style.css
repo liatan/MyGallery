@@ -71,6 +71,40 @@ body {
     background-color: #e4d08f;
 }
 
+#user_profile_block {
+    padding: 20px;
+    margin: 80px auto;
+    width: 400px;
+    height: auto;
+    background-color: #e0d6b4;
+}
+
+#user_profile_block a {
+    position: relative;
+    top: -15px;
+    float: right;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#user_profile_block span {
+    display: table-cell;
+    width: 85px;
+}
+
+#user_profile_block input[type="text"] {
+    width: auto;
+    height: 25px;
+    font-size: 14px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+#user_profile_block form input[type="text"] {
+    display: table-cell;
+}
+
 #user_menu {
     display: block;
     position: fixed;

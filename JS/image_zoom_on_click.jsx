@@ -12,7 +12,10 @@ $(document).ready(function()
 		$(".popup").fadeIn(300); // Медленно выводим изображение
 		$(".popup_bg").click(function()
         {	// Событие клика на затемненный фон	
-			$("#header").css("z-index", "100");   
+			$("#header").delay(500).queue(function(){
+				$(this).css("z-index", "100").dequeue();    
+				
+			});  
 			$(".popup").fadeOut(300);	// Медленно убираем всплывающее окно
 			setTimeout(function() 
             {	// Выставляем таймер
@@ -21,7 +24,9 @@ $(document).ready(function()
 		});
         $(".popup_img").click(function()
         {	// Событие клика на картинку 
-			$("#header").css("z-index", "100");    
+			$("#header").delay(500).queue(function(){
+				$(this).css("z-index", "100").dequeue();    	
+			}); 
 			$(".popup").fadeOut(300);
 			setTimeout(function() 
             {	

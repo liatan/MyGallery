@@ -35,7 +35,8 @@ session_start();
                 //Если пользователь авторизован, то выводим ссылку Выход
             ?>
                     <ul>
-                        <li></img><a id="download" href="/image_download.php">Загрузка</a></li>
+                        <li><a href="/user_profile.php">Настройки</a></li>
+                        <li><a id="download" href="/image_download.php">Загрузка</a></li>
                         <li><a id="logout" href="/logout.php">Выход</a></li>
                     </ul>
                 </li>

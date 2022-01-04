@@ -4,11 +4,8 @@
 
 <?php
 
-	
-	
 	$sql = "SELECT * FROM `user_img` ORDER BY `download_date` DESC";
 	$all_image_query = $mysqli->query($sql);
-
 
 if (isset($_SESSION["login"])) { 
 

@@ -1,6 +1,5 @@
 $(document).ready(function()
 {
-        var valid = $("input[name=submit]");
         var login = $("input[name=login]");
         var email = $("input[name=email]");
         var pass = $("input[name=password]");

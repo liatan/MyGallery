@@ -10,6 +10,7 @@ session_start();
 
 <head>
     <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/jquery.maskedinput.js"></script>
     <title>MyGallery</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
@@ -35,7 +36,7 @@ session_start();
                 //Если пользователь авторизован, то выводим ссылку Выход
             ?>
                     <ul>
-                        <li><a href="/user_profile.php">Настройки</a></li>
+                        <li><a id="profile" href="/user_profile.php">Профиль</a></li>
                         <li><a id="download" href="/image_download.php">Загрузка</a></li>
                         <li><a id="logout" href="/logout.php">Выход</a></li>
                     </ul>

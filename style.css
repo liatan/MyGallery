@@ -76,33 +76,56 @@ body {
     margin: 80px auto;
     width: 400px;
     height: auto;
-    background-color: #e0d6b4;
+    background-color: #ebe4cd;
 }
 
 #user_profile_block a {
-    position: relative;
-    top: -15px;
-    float: right;
+    display: block;
+    margin-top: 10px;
+    width: 370px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
     text-decoration: underline;
     cursor: pointer;
 }
 
-#user_profile_block span {
-    display: table-cell;
-    width: 85px;
+#user_profile_block a:hover {
+    background-color: #e0d6b4;
 }
 
-#user_profile_block input[type="text"] {
+#user_profile_block span {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: medium;
+    color: #00000096;
+    display: block;
     width: auto;
-    height: 25px;
+}
+
+#user_profile_block form input[type="submit"] {
+    margin-top: 10px;
+    width: 390px;
+    height: 40px;
     font-size: 14px;
     padding-left: 10px;
     outline: none;
     border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+#user_profile_block form input[type="email"],
+#user_profile_block form input[type="date"],
 #user_profile_block form input[type="text"] {
-    display: table-cell;
+    margin-top: 2px;
+    width: 380px;
+    height: 40px;
+    font-size: 14px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
 }
 
 #user_menu {
@@ -140,6 +163,13 @@ body {
     color: #000000;
 }
 
+#profile {
+    background-image: url(/upload/styleimg/configuration_control_gear_preferences_setting_settings_tools_icon_123195.ico);
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-size: 25px;
+}
+
 #download {
     background-image: url(/upload/styleimg/download-symbol_icon-icons.com_73591.ico);
     background-repeat: no-repeat;
@@ -152,6 +182,30 @@ body {
     background-repeat: no-repeat;
     background-position: 15px;
     background-size: 25px;
+}
+
+#profile:hover {
+    background: #e6cc8c;
+    background-image: url(/upload/styleimg/configuration_control_gear_preferences_setting_settings_tools_icon_123195.ico);
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-size: 25px;
+}
+
+#download:hover {
+    background: #e6cc8c;
+    background-image: url(/upload/styleimg/download-symbol_icon-icons.com_73591.ico);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 12px;
+}
+
+#logout:hover {
+    background: #e6cc8c;
+    background-image: url(/upload/styleimg/exit_icon-icons.com_48304.ico);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 15px;
 }
 
 #user_menu ul {
@@ -177,22 +231,6 @@ body {
     width: 100%;
     padding: 7px 0;
     text-align: center;
-}
-
-#download:hover {
-    background: #e6cc8c;
-    background-image: url(/upload/styleimg/download-symbol_icon-icons.com_73591.ico);
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 12px;
-}
-
-#logout:hover {
-    background: #e6cc8c;
-    background-image: url(/upload/styleimg/exit_icon-icons.com_48304.ico);
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 15px;
 }
 
 #site_update_news {

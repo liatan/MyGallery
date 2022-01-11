@@ -11,6 +11,7 @@ if ( isset($_SESSION["id"]) ) {
     $_SESSION["user_middle_name"] = $row["user_middle_name"];
     $_SESSION["user_birthday"] = $row["user_birthday"];
     $_SESSION["user_sex"] = $row["user_sex"];
+    $_SESSION["user_tel"] = $row["user_telephone"];
 	}
   if($_SESSION["user_sex"] == 0){ 
     $str1 = 'checked="true"';
@@ -18,6 +19,11 @@ if ( isset($_SESSION["id"]) ) {
   } else {
     $str1 = NULL;
     $str2 = 'checked="true"';
+  }
+  $sql = "SELECT `user_email` FROM `users` WHERE `user_id` = '{$id}' ";
+  $user_profile_query = $mysqli->query($sql);
+  foreach($user_profile_query as $row) {
+	  $_SESSION["user_email"] = $row["user_email"];
   }
 }
 

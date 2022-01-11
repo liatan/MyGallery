@@ -43,14 +43,17 @@ body {
     text-decoration: none;
 }
 
+
+/* Навигация по сайту */
+
 #site_navigation {
-    display: inline-block;
+    display: block;
     width: auto;
     height: 50px;
-    margin: auto;
+    margin: 0 auto;
     position: fixed;
     top: 0;
-    left: 25%;
+    left: 31%;
 }
 
 #site_navigation li {
@@ -71,62 +74,8 @@ body {
     background-color: #e4d08f;
 }
 
-#user_profile_block {
-    padding: 20px;
-    margin: 80px auto;
-    width: 400px;
-    height: auto;
-    background-color: #ebe4cd;
-}
 
-#user_profile_block a {
-    display: block;
-    margin-top: 10px;
-    width: 370px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#user_profile_block a:hover {
-    background-color: #e0d6b4;
-}
-
-#user_profile_block span {
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: medium;
-    color: #00000096;
-    display: block;
-    width: auto;
-}
-
-#user_profile_block form input[type="submit"] {
-    margin-top: 10px;
-    width: 390px;
-    height: 40px;
-    font-size: 14px;
-    padding-left: 10px;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#user_profile_block form input[type="email"],
-#user_profile_block form input[type="date"],
-#user_profile_block form input[type="text"] {
-    margin-top: 2px;
-    width: 380px;
-    height: 40px;
-    font-size: 14px;
-    padding-left: 10px;
-    outline: none;
-    border: 1px solid rgb(206, 206, 206);
-    border-radius: 5px;
-}
+/* Меню пользователя */
 
 #user_menu {
     display: block;
@@ -233,6 +182,73 @@ body {
     text-align: center;
 }
 
+
+/* Профиль пользователя */
+
+#user_profile_block {
+    padding: 20px;
+    margin: 80px auto;
+    width: 400px;
+    height: auto;
+    background-color: #ebe4cd;
+}
+
+#user_more_info_block {
+    display: none;
+}
+
+#user_profile_block a {
+    display: block;
+    margin-top: 10px;
+    width: 370px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#user_profile_block a:hover {
+    background-color: #e0d6b4;
+}
+
+#user_profile_block span {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: medium;
+    color: #00000096;
+    display: block;
+    width: auto;
+}
+
+#user_profile_block form input[type="submit"] {
+    margin-top: 10px;
+    width: 390px;
+    height: 40px;
+    font-size: 14px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#user_profile_block form input[type="email"],
+#user_profile_block form input[type="date"],
+#user_profile_block form input[type="text"] {
+    margin-top: 2px;
+    width: 380px;
+    height: 40px;
+    font-size: 14px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+
+
+/* Новости */
+
 #site_update_news {
     display: block;
     background-color: #e0d6b4;
@@ -240,6 +256,9 @@ body {
     height: 300px;
     margin: 70px auto;
 }
+
+
+/* Регистрация и Авторизация */
 
 #confirm_form {
     display: block;
@@ -344,6 +363,9 @@ body {
     padding: 12px;
     width: 257px;
 }
+
+
+/* Загрузка фотографий */
 
 #download_block {
     background-color: #ebe4cd;
@@ -456,9 +478,8 @@ body {
     margin-left: 35px;
 }
 
-#authorized h2 {
-    text-align: center;
-}
+
+/* Галерея фотографий */
 
 #all_img,
 #user_img {
@@ -585,6 +606,10 @@ body {
     height: 400px;
     background-color: #e4d08f;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+#authorized h2 {
+    text-align: center;
 }
 
 footer {

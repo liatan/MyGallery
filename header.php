@@ -10,7 +10,8 @@ session_start();
 
 <head>
     <script src="JS/jquery-3.6.0.min.js"></script>
-    <script src="JS/jquery.maskedinput.js"></script>
+    <!-- <script src="JS/jquery.maskedinput.js"></script> -->
+    <script src="JS/jquery.inputmask.js"></script>
     <title>MyGallery</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">

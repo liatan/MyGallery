@@ -16,7 +16,7 @@ $body = $title .'
 <title>Подтвердите Email</title>
 </head>
 <body>
-<p>Что бы подтвердить Email, перейдите по <a href="http://localhost:4001/registration_succesful.php?hash=' . $hash . '">ссылка</a></p>
+<p>Что бы подтвердить Email, перейдите по <a href="http://localhost/registration_succesful.php?hash=' . $hash . '">ссылка</a></p>
 </body>
 </html>
 ';

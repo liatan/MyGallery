@@ -6,9 +6,7 @@ body {
 body {
     margin: 0;
     background-image: url(/upload/styleimg/background_main.png);
-    /* Путь к фоновому изображению */
     background-color: #cac5bf;
-    /* Цвет фона */
     display: flex;
     flex-direction: column;
 }
@@ -47,7 +45,6 @@ body {
 /* Навигация по сайту */
 
 #site_navigation {
-    display: block;
     width: auto;
     height: 50px;
     margin: 0 auto;
@@ -186,30 +183,49 @@ body {
 /* Профиль пользователя */
 
 #user_profile_block {
-    padding: 20px;
+    padding: 25px;
     margin: 80px auto;
-    width: 400px;
+    width: 35%;
     height: auto;
     background-color: #ebe4cd;
+    border-radius: 5px;
 }
 
 #user_more_info_block {
     display: none;
 }
 
-#user_profile_block a {
-    display: block;
+.user_more_profile_info_cancel,
+.user_more_profile_info {
+    display: inline-block;
     margin-top: 10px;
-    width: 370px;
-    padding: 10px;
+    width: 98%;
+    padding: 7px 0 7px 0;
     text-align: center;
     border-radius: 5px;
     text-decoration: underline;
     cursor: pointer;
 }
 
-#user_profile_block a:hover {
+
+/* .user_more_profile_info_cancel {
+    text-align: unset;
+    text-indent: 43%;
+} */
+
+.user_more_profile_info_cancel:hover,
+.user_more_profile_info:hover {
     background-color: #e0d6b4;
+}
+
+.user_pass_change {
+    display: block;
+    position: relative;
+    top: -19.1px;
+    right: 8px;
+    float: right;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 #user_profile_block span {
@@ -223,10 +239,9 @@ body {
 
 #user_profile_block form input[type="submit"] {
     margin-top: 10px;
-    width: 390px;
+    width: 98%;
     height: 40px;
     font-size: 14px;
-    padding-left: 10px;
     outline: none;
     border: 1px solid rgb(206, 206, 206);
     border-radius: 5px;
@@ -237,10 +252,10 @@ body {
 #user_profile_block form input[type="date"],
 #user_profile_block form input[type="text"] {
     margin-top: 2px;
-    width: 380px;
+    width: 98%;
     height: 40px;
     font-size: 14px;
-    padding-left: 10px;
+    text-indent: 10px;
     outline: none;
     border: 1px solid rgb(206, 206, 206);
     border-radius: 5px;
@@ -481,14 +496,17 @@ body {
 
 /* Галерея фотографий */
 
-#all_img,
-#user_img {
-    margin: 80px auto;
+.users_img {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 310px);
+    justify-content: space-evenly;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 7%;
     background-color: #ebe4cd;
     border: none;
     border-radius: 10px;
-    padding: 10px;
-    width: 1300px;
+    padding: 15px;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -537,7 +555,7 @@ body {
 
 .image_animation {
     overflow: hidden;
-    margin: 5px auto;
+    margin: 10px auto;
     width: 300px;
     height: 250px;
     border-radius: 3px;
@@ -553,18 +571,16 @@ body {
     object-fit: cover;
 }
 
-#all_img img,
-#user_img img {
+.users_img img {
     transition: all 1s ease-out;
     border-radius: 3px;
-    width: 300px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     cursor: pointer;
 }
 
-#all_img img:hover,
-#user_img img:hover {
+.users_img img:hover {
     transform: scale(1.1);
     border-radius: 3px;
     width: 300px;
@@ -573,7 +589,7 @@ body {
     cursor: pointer;
 }
 
-#user_img a {
+.users_img a {
     font-size: 30px;
     opacity: 0.1;
     color: rgba(0, 0, 0, 0);
@@ -586,7 +602,7 @@ body {
     top: -243px;
 }
 
-#user_img a:hover {
+.users_img a:hover {
     font-size: 30px;
     opacity: 0.9;
     color: rgba(0, 0, 0, 0);
@@ -615,7 +631,6 @@ body {
 footer {
     flex: 0 0 auto;
     margin-top: 20px;
-    width: 100%;
     height: 100px;
     background-color: rgb(98, 98, 98);
 }

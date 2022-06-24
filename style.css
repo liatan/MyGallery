@@ -25,13 +25,18 @@ body {
     background-color: #ebe4cd;
 }
 
-#header h1 {
+#site_logo {
+    display: inline-block;
+    margin-left: 15%;
+    width: auto;
+    height: 50px;
+}
+
+#site_logo a {
     font-size: 25px;
     color: #000000;
     letter-spacing: 2px;
     text-align: left;
-    margin-top: 9px;
-    margin-left: 10px;
 }
 
 #header a:active,
@@ -41,28 +46,33 @@ body {
     text-decoration: none;
 }
 
+p,
+a,
+h2 {
+    font-family: 'Nunito', sans-serif;
+}
+
 
 /* Навигация по сайту */
 
 #site_navigation {
-    width: auto;
+    display: inline-block;
+    position: relative;
+    margin-top: 0%;
+    margin-left: 7%;
+    margin-right: 7%;
+    width: 35%;
     height: 50px;
-    margin: 0 auto;
-    position: fixed;
-    top: 0;
-    left: 31%;
 }
 
 #site_navigation li {
-    display: block;
-    float: left;
+    display: inline;
     width: auto;
-    margin-left: 20px;
 }
 
 #site_navigation li a {
+    display: inline-block;
     padding: 15px;
-    display: block;
     height: 20px;
     font-weight: bold;
 }
@@ -75,11 +85,11 @@ body {
 /* Меню пользователя */
 
 #user_menu {
-    display: block;
+    display: inline-block;
     position: fixed;
-    right: 0;
-    top: 0;
-    width: 151px;
+    right: 15%;
+    top: 0%;
+    width: 150px;
     height: 50px;
     margin: 0 auto;
     background-color: #e0d6b4;
@@ -87,10 +97,25 @@ body {
 }
 
 #user_menu p {
-    position: fixed;
-    top: -4px;
-    right: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    width: 5em;
     font-weight: bold;
+    font-size: 18px;
+}
+
+#user_menu ul {
+    position: absolute;
+    top: 50px;
+    right: 0%;
+    width: 190px;
+    background-color: #ebe4cd;
+    display: none;
+    padding: 10px 0;
+    list-style: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 #user_menu li {
@@ -154,19 +179,6 @@ body {
     background-position: 15px;
 }
 
-#user_menu ul {
-    position: absolute;
-    top: 50px;
-    right: -8px;
-    width: 199px;
-    background-color: #ebe4cd;
-    display: none;
-    padding: 10px 0;
-    list-style: none;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-
 #user_menu ul li {
     display: block;
     width: 100%;
@@ -187,8 +199,35 @@ body {
     margin: 80px auto;
     width: 35%;
     height: auto;
-    background-color: #ebe4cd;
+    background-color: #e5e1e198;
     border-radius: 5px;
+}
+
+#user_avatar {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    background-color: #a09f9f98;
+    border-radius: 50px;
+}
+
+#user_avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+#user_nickname {
+    display: block;
+    float: right;
+    margin-top: -5%;
+    width: 80%;
+}
+
+#user_nickname p {
+    text-align: center;
+    font-size: 25pt;
 }
 
 #user_more_info_block {
@@ -215,7 +254,7 @@ body {
 
 .user_more_profile_info_cancel:hover,
 .user_more_profile_info:hover {
-    background-color: #e0d6b4;
+    background-color: #dbdada98;
 }
 
 .user_pass_change {
@@ -383,7 +422,7 @@ body {
 /* Загрузка фотографий */
 
 #download_block {
-    background-color: #ebe4cd;
+    background-color: #e5e1e198;
     border-radius: 5px;
     margin: 100px auto;
     width: 750px;
@@ -394,7 +433,7 @@ body {
 }
 
 #download_block h2 {
-    background-color: #e0d6b4;
+    background-color: #dbdada98;
     border-radius: 5px 5px 0px 0px;
     color: rgb(0, 0, 0);
     padding: 20px;
@@ -410,7 +449,7 @@ body {
     width: 710px;
     border: 2px dashed;
     border-radius: 3px;
-    background-color: #e4d08f;
+    background-color: #e5e1e198;
     background-image: url(/upload/styleimg/arrow_down_download.png);
     background-size: 100px;
     background-repeat: no-repeat;
@@ -458,17 +497,13 @@ body {
     position: static;
     border: none;
     border-radius: 3px;
-    background-color: #dbdada;
+    background-color: #aeaeae98;
     color: #000000;
     font-weight: bold;
     cursor: pointer;
     margin-left: 17px;
     padding: 15px;
     width: 250px;
-}
-
-#download_block form input[type="submit"]:hover {
-    background-color: #ebe9e9;
 }
 
 #download_block form input[type="button"] {
@@ -500,14 +535,14 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, 310px);
     justify-content: space-evenly;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 7%;
-    background-color: #ebe4cd;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    background-color: #e5e1e198;
     border: none;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3); */
 }
 
 .popup {
@@ -565,7 +600,7 @@ body {
     padding: 20px;
     border-radius: 3px;
     margin: 80px 25% auto;
-    background-color: #e0d6b4;
+    background-color: #e5e1e198;
     width: 700px;
     height: 600px;
     object-fit: cover;
@@ -631,11 +666,29 @@ body {
 footer {
     flex: 0 0 auto;
     margin-top: 20px;
-    height: 100px;
+    height: auto;
     background-color: rgb(98, 98, 98);
 }
 
-footer h2 {
-    text-align: center;
-    margin: auto;
+#col_1 {
+    display: inline-block;
+    margin-left: 15%;
+}
+
+#col_1 ul li {
+    display: block;
+    text-align: left;
+    padding: 5px;
+}
+
+#col_2 {
+    display: inline-block;
+    position: fixed;
+    right: 15%;
+}
+
+#col_2 ul li {
+    display: block;
+    text-align: left;
+    padding: 5px;
 }

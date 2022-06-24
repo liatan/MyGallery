@@ -5,6 +5,10 @@ include 'PHP/user_profile_sql_request.php';
 
 <div id="user_profile_block">  
     <form action='user_profile_update.php' id="user_profile_form" method="post"> 
+        <div id="user_avatar">  
+            <img src="upload\avatars\espozito.gif" alt="">        
+        </div>
+        <div id="user_nickname"><?php echo '<p>' . $_SESSION["login"] . '</p>';?></div>
         <span>Имя:</span><input type="text" name="user_name" value="<?php echo $_SESSION["user_name"] ?>">
         <span>Фамилия:</span><input type="text" name="user_surname" value="<?php echo $_SESSION["user_surname"] ?>">
         <span>Отчество:</span><input type="text" name="user_middle_name" value="<?php echo $_SESSION["user_middle_name"] ?>">

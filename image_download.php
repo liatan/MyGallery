@@ -36,24 +36,26 @@ if (isset($_SESSION["login"])) {
 	{
 		if(!empty($_FILES["image"]["tmp_name"]) ){
 		$countImage = count($_FILES["image"]["tmp_name"]);
-		for ($i = 0; $i < $countImage + 1; $i++) 
+		for ($i = 0; $i < $countImage ; $i++) 
 		{			
 			$file = $_FILES["image"]["tmp_name"][$i];
 			$fileType = $_FILES["image"]["type"][$i];
 			$fileTypeStr = substr($fileType, strpos($fileType, '/') + 1);
 			$fileSource = 'upload/img/';
-			if (exif_imagetype($file)) 
-			{	
-				$fileName = md5(microtime()).'.'.$fileTypeStr;
-				if (is_uploaded_file($file)) 
-				{
-					move_uploaded_file($file, $fileSource.$fileName);
-					$sql = "INSERT INTO user_img(user_id, user_image, download_date) VALUES( {$id},'{$fileSource}{$fileName}',CURRENT_TIMESTAMP)";
-					$mysqli->query($sql);
-					$_SESSION["success_download"] = 1;
-        			header("Location: /image_download.php");
-				}
-			}
+			if(!empty($file)){
+				if (exif_imagetype($file)) 
+				{	
+					$fileName = md5(microtime()).'.'.$fileTypeStr;
+					if (is_uploaded_file($file)) 
+						{
+						move_uploaded_file($file, $fileSource.$fileName);
+						$sql = "INSERT INTO user_img(user_id, user_image, download_date) VALUES( {$id},'{$fileSource}{$fileName}',CURRENT_TIMESTAMP)";
+						$mysqli->query($sql);
+						$_SESSION["success_download"] = 1;
+        				header("Location: /image_download.php");
+					}
+				}	
+			} else { echo '<p>Выберите фото для загрузки</p>'; }
 		}
 	}
 	}
